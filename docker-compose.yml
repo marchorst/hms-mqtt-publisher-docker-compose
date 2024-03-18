@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  hms-mqtt-publisher:
+    image: dennisosrm/hms-mqtt-publisher
+    volumes:
+      - ./config.toml:/config.toml
+    # Other configurations like ports, environment variables, etc. can be added if needed
