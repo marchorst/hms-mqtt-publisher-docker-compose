@@ -2,6 +2,12 @@
 
 This repository houses a ready-to-use Docker Compose setup for [`hms-mqtt-publisher`](https://github.com/DennisOSRM/hms-mqtt-publisher/), a specialized tool for fetching telemetry data from HMS-XXXXW-2T series micro-inverters and publishing this information to an MQTT broker. This setup is designed to simplify the deployment process significantly, allowing users to get the system up and running without the need for manual compilation or detailed Docker knowledge. For more detailed information about the original project, please visit the [hms-mqtt-publisher GitHub repository](https://github.com/DennisOSRM/hms-mqtt-publisher).
 
+## Details
+
+You can find more details about this solution and alternatives here:
+
+[https://www.worldhack.de/introducing-a-simple-docker-compose-setup-for-hms-mqtt-publisher/](https://www.worldhack.de/introducing-a-simple-docker-compose-setup-for-hms-mqtt-publisher/)
+
 ## Overview
 
 The [`hms-mqtt-publisher`](https://github.com/DennisOSRM/hms-mqtt-publisher/) tool, by leveraging the internal DTU (Data Transfer Unit) of the HMS-XXXXW-2T micro-inverters, enables the retrieval of current telemetry information. It supports output to a standard MQTT channel as well as a Home Assistant-friendly channel that includes device auto-discovery.
@@ -18,15 +24,8 @@ To utilize this Docker Compose setup, ensure you have Docker and Docker Compose 
    cd <cloned-repo-directory>
    ```
 
-2. **Environment Configuration:**
-   Before running the service, configure the necessary environment variables to match your setup. This can be done within the `docker-compose.yml` file or through an `.env` file in the same directory as your `docker-compose.yml`. Required environment variables include:
-   - `INVERTER_HOST`: Hostname or IP of the inverter.
-   - `MQTT_BROKER_HOST`: Hostname or IP of the MQTT broker.
-   - `MQTT_USERNAME`: (Optional) MQTT broker username.
-   - `MQTT_PASSWORD`: (Optional) MQTT broker password.
-   - `MQTT_PORT`: (Optional) MQTT broker port.
-
-   Additionally, you can customize the configuration by editing the provided `config.toml` file. The latest version of `config.toml` can be found [here](https://github.com/DennisOSRM/hms-mqtt-publisher/blob/main/config.toml).
+2. **Environment Configuration**
+   Before running the service, configure the provided `config.toml` file. The latest version of `config.toml` can be found [here](https://github.com/DennisOSRM/hms-mqtt-publisher/blob/main/config.toml).
 
 3. **Launch with Docker Compose:**
    Execute the following command to start the service:
